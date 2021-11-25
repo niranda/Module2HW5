@@ -51,8 +51,8 @@ namespace StyleCop.Main
                 }
             }
 
-            _fileService.WriteToFile(_loggerService.LogArray);
-            _fileService.InitFileSystem();
+            _fileService.WriteToFile(_loggerService.GetLogArray());
+            _fileService.OddFilesCollector();
         }
     }
 }

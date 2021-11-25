@@ -25,9 +25,11 @@ namespace ShopApp.Services
             if (!Directory.Exists(_directoryPath))
             {
                 Directory.CreateDirectory(_directoryPath);
-                return;
             }
+        }
 
+        public void OddFilesCollector()
+        {
             _filesArray = Directory.GetFiles(_directoryPath);
             if (_filesArray.Length > 3)
             {
